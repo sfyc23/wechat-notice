@@ -55,14 +55,14 @@ class EmailNotice(WechatNotice):
 class ServerChanNotice(WechatNotice):
     """
     Server 酱 ——「程序员」和「服务器」之间的通信软件。(一对多：PushBear)
-    官网：http://sc.ftqq.com/3.version
+    官网：http://sct.ftqq.com
     使用：
     notice = ServerChanNotice(sckey='你申请的sckey')
     notice.send('这是一个标题','这是内容')
     需要安装 requests 才可使用。
     """
 
-    base_url = 'https://sc.ftqq.com/{sckey}.send'
+    base_url = 'https://sctapi.ftqq.com/{sckey}.send'
     url = None
 
     def __init__(self, sckey=None):
